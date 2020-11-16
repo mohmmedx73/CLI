@@ -13,33 +13,33 @@ public class Parser {
 	
 	public Parser(String c) 
 	{
-		command = c;
-		Check(command);
+	    command = c;
+	    Check(command);
 	}
 	
 	public void Check(String input) 
 	{
-		int c = 0;
-		String[] content = command.split(" ");
-		int size = content.length; 
-		
-		for(int i=0; i<size; i++)
-		{
-			if(i==0)
-				cmd = content[0];
-			else
-				args.add(content[i]); 
-		}
-		if(cmd.equals("ls")) {
-			objT.ls();
-		}
+	    int c = 0;
+	    String[] content = command.split(" ");
+	    int size = content.length; 
+
+	    for(int i=0; i<size; i++)
+	    {
+	        if(i==0)
+		    cmd = content[0];
+	        else
+		    args.add(content[i]); 
+	    }
+	    if(cmd.equals("ls")) {
+		objT.ls();
+	    }
 	    else if(cmd.equals("more")) 
-			objT.more(args.get(0)); 
-	  
+		objT.more(args.get(0)); 
+
 	    else if(cmd.equals("date"))
-	    	objT.date(); 
+		objT.date(); 
 	    else if(cmd.equals("clear")) 
-	    	objT.clear(); 
+		objT.clear(); 
 	    
 	}
 	
