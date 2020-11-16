@@ -3,35 +3,20 @@ import java.util.Scanner;
 import java.io.IOException;
  
 public class Main {
-	public static void main(String args[]) throws IOException 
+	public static void main(String args[]) 
 	{
-		String current = "C:\\"; 
-		Terminal obj_parse = new Terminal(); 
+		String current = "C:/Ubuntu"; 
+		
+		
+		Terminal objT = new Terminal();
 		Scanner Input = new Scanner(System.in);
-		System.out.print(current + " ");
-		String command = Input.nextLine();
-		obj_parse.ls();
-				
+		
+		while(true) {
+			System.out.print(current + " ");
+			String command = Input.nextLine();
+			Parser objP = new Parser(command); 
 			
-			
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		/*
-		String[] M = obj1.getArguments();  // forcing for Argument 
-	    for(int i=0; M[i]!=null; i++)
-	    {
-	    	System.out.println(M[i]);
-	    }
-	    */
-	    Input.close();
+		}
+	    
 	}
 }
